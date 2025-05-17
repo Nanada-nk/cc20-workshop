@@ -1,4 +1,9 @@
 @import "tailwindcss";
 @plugin "daisyui" {
-  themes: light --default, cupcake;
+  themes: light --default, caramellatte;
 }
+
+html {
+  background-color:#fdf5c9;
+}
+

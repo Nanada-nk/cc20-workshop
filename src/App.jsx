@@ -43,15 +43,23 @@ function App() {
       clonedCart.splice(idx,1)
     }
     setCarts(clonedCart)
-    console.log('decQuantity',decQuantity)
+    // console.log('decQuantity',decQuantity)
   }
 
+  // const incQuantity = (id) => {
+  //   let idx = carts.findIndex(el => el.id === id) // not found = -1
+  //   const clonedCart = [...carts]
+  //   clonedCart[idx].quantity +=1
+  // }
+  // setCarts(cloneCart)
+  // ใช้ addToCart แทน เพราะทำงานเหมือนกัน
+
   return (
-    <div className="min-h-screen flex flex-col px-4">
+    <div>
       <Header itemCount={carts.length} />
-      <div className="flex flex-1">
-        <ProductList products={products} addToCart={addToCart} />
-        <CartSummary carts={carts} decQuantity={decQuantity} />
+      <div className="grid grid-cols-[4fr_1fr] gap-4 relative top-25">
+        <ProductList products={products} addToCart={addToCart} carts={carts} decQuantity={decQuantity}/>
+        <CartSummary carts={carts} decQuantity={decQuantity} addToCart={addToCart} />
       </div>
     </div>
   );
