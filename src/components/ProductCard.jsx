@@ -34,7 +34,7 @@ function ProductCard(props) {
         <div className="card-actions justify-end">
           {/* ======================================= ปุ่ม add to cart ============================ */}
           <button
-            className="btn skeleton border-none"
+            className="btn skeleton border-none text-sm p-1"
             style={{ backgroundColor: isInCart ? "#ca8787" : "#ffcb85" }}
             onClick={() => {
               if (carts.some((item) => item.id === id)) {
